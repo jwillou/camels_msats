@@ -1,4 +1,4 @@
-qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore
+qseqid	sseqid	pident	length	mismatch	gapopen	qstart	qend	sstart	send	evalue	bitscore
 
  1.	 qseqid	 query (e.g., gene) sequence id
  2.	 sseqid	 subject (e.g., reference genome) sequence id
