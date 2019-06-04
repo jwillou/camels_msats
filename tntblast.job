@@ -1,0 +1,14 @@
+#!/bin/sh -l
+
+#PBS -N tntblast
+#PBS -q standby
+#PBS -l nodes=1:ppn=1,naccesspolicy=singleuser
+#PBS -l walltime=4:00:00
+#PBS -e ../camels/blast.sterror
+#PBS -o ../camels/blast.stout
+
+cd /scratch/snyder/j/jwillou/camels
+#module load blast/2.9.0+
+#makeblastdb -in dromedary.pbjelly.pilon.abyss.pilon.chromosomes.fasta -dbtype nucl
+
+./tntblast-2.04/src/tntblast -i query.txt -d dromedary.pbjelly.pilon.abyss.pilon.chromosomes.fasta -e 40 -E 45 -o tntblast.out
