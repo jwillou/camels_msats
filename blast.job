@@ -10,5 +10,5 @@
 cd /scratch/snyder/j/jwillou/camels
 module load blast/2.9.0+
 
-makeblastdb -in dromedary.pbjelly.pilon.abyss.pilon.chromosomes.fasta -dbtype nucl
-blastn -query primers.fa -db dromedary.pbjelly.pilon.abyss.pilon.chromosomes.fasta -out outblast.txt -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore nident mismatch gapopen gaps qseq sseq' -perc_identity 10 -qcov_hsp_perc 10 -max_target_seqs 5 -evalue 10 -num_threads 20
+#makeblastdb -in dromedary.pbjelly.pilon.abyss.pilon.chromosomes.fasta -dbtype nucl
+blastn -query primers_mod.fasta -db dromedary.pbjelly.pilon.abyss.pilon.chromosomes.fasta -out outblast.txt -outfmt 6 -perc_identity 10 -qcov_hsp_perc 10 -max_target_seqs 5 -word_size 7 -evalue 1000 -soft_masking FALSE 
